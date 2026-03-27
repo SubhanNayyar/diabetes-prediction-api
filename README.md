@@ -1,40 +1,25 @@
-Diabetes Prediction REST API
-Developed by Subhan Nayyar
-A production-ready Flask API designed to predict the likelihood of diabetes based on medical diagnostic measurements.
+# Diabetes Prediction System: SVM Implementation
+### AI Lab Semester Project | B.S. Artificial Intelligence
 
-🚀 Overview
-This project demonstrates the successful deployment of a Machine Learning model as a scalable web service. It accepts structured JSON requests containing 8 critical clinical features and provides real-time predictions.
+A machine learning application developed to predict the onset of diabetes based on diagnostic measurements. This project was built to demonstrate the practical application of supervised learning in healthcare informatics.
 
-🛠️ Technical Stack
-Language: Python 3.8+
+## 🚀 Project Context
+Developed as a core Semester Project for the AI Lab, this system utilizes a Support Vector Machine (SVM) classifier to process clinical data. The project focuses on high-precision binary classification (Diabetic vs. Non-Diabetic).
 
-Framework: Flask
+## 📊 Dataset: Pima Indians Diabetes
+The model was trained on the standardized Pima Indians dataset, featuring 8 specific medical predictors:
+* Pregnancies | Glucose | Blood Pressure | Skin Thickness
+* Insulin | BMI | Diabetes Pedigree Function | Age
 
-Libraries: NumPy, Scikit-Learn, Pickle
+## 🛠️ Technical Stack
+* **Algorithm:** Support Vector Machine (SVM) with a Linear Kernel.
+* **Libraries:** Scikit-Learn, NumPy, Pandas.
+* **Environment:** Python 3.x (Local Lab Environment).
 
-📊 Feature Architecture
-The API processes the following clinical features:
+## 🧠 Key Learnings
+* **Data Standardization:** Learned the importance of `StandardScaler` to ensure all 8 features (like Age vs. Insulin) are on the same scale for the SVM.
+* **Model Evaluation:** Analyzed accuracy scores to ensure the classifier wasn't just "guessing" but finding the optimal hyperplane for the data.
+* **Healthcare AI:** Explored the ethical and technical challenges of building predictive tools for medical diagnostics.
 
-Pregnancies | 2. Glucose | 3. Blood Pressure | 4. Skin Thickness | 5. Insulin | 6. BMI | 7. Pedigree | 8. Age
-
-📡 Sample API Request
-Endpoint: POST /predict
-
-Sample JSON Body:
-{
-"pregnancies": 2,
-"glucose": 135,
-"blood_pressure": 82,
-"skin_thickness": 31,
-"insulin": 0,
-"bmi": 29.8,
-"pedigree": 0.881,
-"age": 28
-}
-
-🔜 Future Enhancements
-Full model weight integration (.pkl loading logic).
-
-Docker containerization for cloud deployment.
-
-Authentication endpoints for secure access.
+## 📡 Sample Logic
+The system allows a user to input clinical measurements and returns a real-time prediction using the pre-trained SVM weights.
